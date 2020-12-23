@@ -9,6 +9,10 @@
 </head>
 <body>
 
+<div id="nav">
+	<%@ include file="../include/nav.jsp" %>
+</div>
+
 <label>제목</label>
 ${view.title}<br />
 
