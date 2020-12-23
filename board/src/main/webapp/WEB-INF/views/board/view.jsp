@@ -9,8 +9,6 @@
 </head>
 <body>
 
-<form method="post">
-
 <label>제목</label>
 ${view.title}<br />
 
@@ -20,7 +18,9 @@ ${view.writer}<br />
 <label>내용</label>
 ${view.content}<br />
 
-</form>
+<div>
+	<a href="/board/modify?bno=${view.bno}">게시물 수정</a>
+</div>
 
 </body>
 </html>
