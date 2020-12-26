@@ -58,4 +58,13 @@
 		order by bno desc
 			limit #{displayPost}, #{postNum}
 	</select>
+	
+	<!-- 과정을 봅시다 -->
+	<select id="listPageFirst" parameterType="hashMap" resultType="com.board.domain.BoardVO">
+		select
+			bno, title, writer, regDate, viewCnt
+		from tb1_board
+		order by bno desc
+			limit #{displayPost}, #{postNum}
+	</select>
 </mapper>
