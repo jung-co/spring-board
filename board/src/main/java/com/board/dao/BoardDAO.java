@@ -28,4 +28,11 @@ public interface BoardDAO {
 	
 	// 게시물 목록 + 페이징
 	public List<BoardVO> listPageFirst(int displayPost, int postNum) throws Exception;
+	
+	// 게시물 목록 + 페이징 + 검색
+	public List<BoardVO> listPageSearch(
+			int displayPost, int postNum, String searchType, String keyword) throws Exception;
+	
+	// 게시물 검색 + 총 갯수
+	public int searchCount(String searchType, String keyword) throws Exception;
 }
