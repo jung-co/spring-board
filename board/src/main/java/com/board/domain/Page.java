@@ -96,7 +96,7 @@ public class Page {
 			if(searchType.equals("") || keyword.equals("")) {
 				searchTypeKeyword = "";
 			} else {
-				searchTypeKeyword = "&searchType" + searchType + "&keyword" + keyword;
+				searchTypeKeyword = "&searchType=" + searchType + "&keyword=" + keyword;
 			}
 		}
 		
