@@ -10,8 +10,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.board.dao.ReplyService;
 import com.board.domain.BoardVO;
 import com.board.domain.Page;
+import com.board.domain.ReplyVO;
 import com.board.service.BoardService;
 //import com.board.service.BoardService;
 
@@ -19,7 +21,10 @@ import com.board.service.BoardService;
 @RequestMapping("/board/*")
 public class BoardController {
 	@Inject
-	BoardService service;
+	private BoardService service;
+	
+	@Inject
+	private ReplyService replyService;
 	
 	// 게시물 목록
 	@RequestMapping(value="/list", method=RequestMethod.GET)
@@ -236,6 +241,11 @@ public class BoardController {
 		BoardVO vo = service.view(bno);
 
 		model.addAttribute("view", vo);
+		
+		// 댓글 조회
+		List<ReplyVO> reply = null;
+		reply = replyService.list(bno);
+		model.addAttribute("reply", reply);
 	}
 	
 	// 게시물 수정

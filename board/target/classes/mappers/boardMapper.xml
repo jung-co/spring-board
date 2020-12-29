@@ -47,7 +47,7 @@
 	
 	<!-- 게시물 총 갯수 -->
 	<select id="count" resultType="int">
-		select count(*) from tb1_board
+		select count(bno) from tb1_board
 	</select>
 	
 	<!-- 게시물 목록 + 페이징 -->

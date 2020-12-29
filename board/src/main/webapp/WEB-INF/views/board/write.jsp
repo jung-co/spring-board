@@ -17,9 +17,11 @@
 	
 	<label>제목</label>
 	<input type="text" name="title" /><br />
+<hr style="boarder:solid 20px black;">
 	
 	<label>작성자</label>
 	<input type="text" name="writer" /><br />
+<hr style="boarder:solid 20px black;">
 	
 	<label>내용</label>
 	<textarea cols="50" rows="5" name="content"></textarea><br />
