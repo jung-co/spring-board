@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.board.dao.ReplyService;
 import com.board.domain.BoardVO;
 import com.board.domain.Page;
 import com.board.domain.ReplyVO;
 import com.board.service.BoardService;
 //import com.board.service.BoardService;
+import com.board.service.ReplyService;
 
 @Controller
 @RequestMapping("/board/*")

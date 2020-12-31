@@ -1,4 +1,4 @@
-package com.board.dao;
+package com.board.service;
 
 import java.util.List;
 
@@ -6,6 +6,7 @@ import javax.inject.Inject;
 
 import org.springframework.stereotype.Service;
 
+import com.board.dao.ReplyDAO;
 import com.board.domain.ReplyVO;
 
 @Service

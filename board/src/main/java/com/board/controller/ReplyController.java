@@ -6,8 +6,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.board.dao.ReplyService;
 import com.board.domain.ReplyVO;
+import com.board.service.ReplyService;
 
 @Controller
 @RequestMapping("/reply/*")

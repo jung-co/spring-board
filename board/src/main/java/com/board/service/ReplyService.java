@@ -1,4 +1,4 @@
-package com.board.dao;
+package com.board.service;
 
 import java.util.List;
 
