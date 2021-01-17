@@ -49,7 +49,7 @@ public class BoardController {
 		
 		model.addAttribute("list", list);
 		model.addAttribute("page", page);
-		 model.addAttribute("select", num);
+		model.addAttribute("select", num);
 		 /*
 		// 게시물 총 갯수
 		 int count = service.count();

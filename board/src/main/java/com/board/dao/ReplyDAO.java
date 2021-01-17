@@ -9,7 +9,10 @@ public interface ReplyDAO {
 	// 댓글 조회
 	public List<ReplyVO> list(int bno) throws Exception;
 	
-	// 댓글 조회
+	// 댓글 하나만 조회
+	public ReplyVO view(int bno, int rno) throws Exception;
+	
+	// 댓글 작성
 	public void write(ReplyVO vo) throws Exception;
 	
 	// 댓글 수정

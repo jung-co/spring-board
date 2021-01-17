@@ -33,51 +33,27 @@ ${view.content}<br />
 <hr style="boarder:solid 20px black;"/>
 
 <!-- 댓글 시작 -->
-<ul>
-<!-- 
-	<li>
-		<div>
-			<p>첫번째 댓글 작성자</p>
-			<p>첫번째 댓글</p>
-		</div>
-	</li>
-	<li>
-		<div>
-			<p>두번째 댓글 작성자</p>
-			<p>두번째 댓글</p>
-		</div>
-	</li>
-
-	<li>
-		<div>
-			<p>세번째 댓글 작성자</p>
-			<p>세번째 댓글</p>
-		</div>
-	</li>
--->
-
-	<c:forEach items="${reply}" var="reply">
+<c:forEach items="${reply}" var="reply">
 	<li>
 		<div>
 			<p>${reply.writer} (<fmt:formatDate value="${reply.regDate}" pattern="yyyy-MM-dd" />)</p>
 			<p>${reply.content}</p>
+			<p><a href="/board/replyModify?bno=${view.bno}">댓글 수정</a></p>
 		</div>
 	</li>	
-	</c:forEach>
-</ul>
-
+</c:forEach>
 <div>
 
 	<form method="post" action="/reply/write">
 		<p>
-			<label>댓글 작성자</label> <input type="text">
+			<label>댓글 작성자</label> <input type="text" name="writer">
 		</p>
 		<p>
-			<textarea rows="5" cols="50"></textarea>
+			<textarea rows="5" cols="50" name="content"></textarea>
 		</p>
 		<p>
 			<input type="hidden" name="bno" value="${view.bno}">
-			<button type="button">댓글 작성</button>
+			<button type="submit">댓글 작성</button>
 		</p>
 	</form>
 </div>

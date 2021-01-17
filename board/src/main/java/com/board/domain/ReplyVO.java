@@ -20,6 +20,7 @@ create table tb1_reply(
 	private String writer;
 	private String content;
 	private Date regDate;
+	
 	public int getRno() {
 		return rno;
 	}
@@ -50,6 +51,4 @@ create table tb1_reply(
 	public void setRegDate(Date regDate) {
 		this.regDate = regDate;
 	}
-	
-	
 }
